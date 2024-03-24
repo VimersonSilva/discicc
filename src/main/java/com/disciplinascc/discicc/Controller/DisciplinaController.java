@@ -2,7 +2,6 @@ package com.disciplinascc.discicc.Controller;
 
 import com.disciplinascc.discicc.DTO.DisciplinaDTO;
 import com.disciplinascc.discicc.Service.DisciplinaBuscaTodosServiceInterface;
-import com.disciplinascc.discicc.Service.DisciplinaBuscaTodosBuscaTodosService;
 import com.disciplinascc.discicc.Service.DisciplinaServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

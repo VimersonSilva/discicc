@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class DisciplinaBuscaTodosBuscaTodosService implements DisciplinaBuscaTodosServiceInterface {
+public class DisciplinaBuscaTodosService implements DisciplinaBuscaTodosServiceInterface {
     @Autowired
     private DisciplinaRepository disciplinaRepository;
 
