@@ -1,22 +1,19 @@
 package com.disciplinascc.discicc.Service;
-
-import com.disciplinascc.discicc.Repository.DisciplinaRepository;
 import com.disciplinascc.discicc.entities.Disciplina;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.disciplinascc.discicc.DTO.DisciplinaDTO;
+import com.disciplinascc.discicc.Repository.DisciplinaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Service
-public class DisciplinaService {
-    @Autowired
-    private DisciplinaRepository disciplinaRepository;
+public class DisciplinaService implements DisciplinaServiceInterface{
 
+    DisciplinaRepository disciplinaRepository;
+    @Override
     @Transactional(readOnly = true)
-    public List<DisciplinaMinDTO> findAll() {
-        List<Disciplina> result = disciplinaRepository.findAll();
-        List<DisciplinaMinDTO> dto = result.stream().map(x -> new DisciplinaMinDTO(x)).toList();
-        return dto;
+    public DisciplinaDTO findById(Long idCodigoDisciplina){
+        Disciplina result = disciplinaRepository.findById(idCodigoDisciplina).get();
+        DisciplinaDTO disciplinaDTO = new DisciplinaDTO(result);
+        return disciplinaDTO;
     }
 }
