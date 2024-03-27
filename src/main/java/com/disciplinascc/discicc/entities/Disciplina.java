@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import org.springframework.data.annotation.Id;
 
@@ -10,7 +12,9 @@ import org.springframework.data.annotation.Id;
 @Table(name = "tb_disciplina")
 public class Disciplina {
     @Id
-    private Long idCodigoDisciplina;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    private Integer codigoDisciplina;
     private String nomeDisciplina;
     private Integer numPeriodo;
     private Integer quantCreditos;
@@ -22,13 +26,41 @@ public class Disciplina {
 
     public Disciplina(){}
 
-    public Disciplina(Long idCodigoDisciplina, String nomeDisciplina,
+    public Disciplina(Integer codigoDisciplina, String nomeDisciplina,
                       Integer numPeriodo, Integer quantCreditos, String sigla){
-        this.idCodigoDisciplina = idCodigoDisciplina;
+        this.codigoDisciplina = codigoDisciplina;
         this.nomeDisciplina = nomeDisciplina;
         this.numPeriodo = numPeriodo;
         this.sigla = sigla;
         this.quantCreditos = quantCreditos;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Integer getCodigoDisciplina() {
+        return codigoDisciplina;
+    }
+
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
+    }
+
+    public Integer getNumPeriodo() {
+        return numPeriodo;
+    }
+
+    public Integer getQuantCreditos() {
+        return quantCreditos;
+    }
+
+    public List<Disciplina> getPreRequisitos() {
+        return preRequisitos;
+    }
+
+    public String getSigla() {
+        return sigla;
     }
 
     @Override
@@ -36,11 +68,11 @@ public class Disciplina {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Disciplina that = (Disciplina) o;
-        return Objects.equals(idCodigoDisciplina, that.idCodigoDisciplina);
+        return Objects.equals(id, that.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idCodigoDisciplina);
+        return Objects.hash(id);
     }
 }
