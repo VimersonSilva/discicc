@@ -1,4 +1,5 @@
 package com.disciplinascc.discicc.entities;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
@@ -6,11 +7,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 @Table(name = "tb_disciplina")
-public class Disciplina {
+public class Disciplina implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -21,7 +22,7 @@ public class Disciplina {
 
     //private String tipoDisciplina;
 
-    private List<Disciplina> preRequisitos;
+    //private List<Disciplina> preRequisitos;
     private String sigla;
 
     public Disciplina(){}
@@ -55,9 +56,6 @@ public class Disciplina {
         return quantCreditos;
     }
 
-    public List<Disciplina> getPreRequisitos() {
-        return preRequisitos;
-    }
 
     public String getSigla() {
         return sigla;
