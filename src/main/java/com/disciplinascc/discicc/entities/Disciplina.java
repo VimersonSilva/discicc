@@ -13,7 +13,8 @@ import jakarta.persistence.Id;
 @Table(name = "tb_disciplina")
 public class Disciplina implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private Integer codigoDisciplina;
     private String nomeDisciplina;
