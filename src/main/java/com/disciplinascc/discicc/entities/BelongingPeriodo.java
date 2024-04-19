@@ -9,12 +9,12 @@ import jakarta.persistence.Table;
 public class BelongingPeriodo {
 
     @EmbeddedId
-    private BelongingPK id = new BelonginPK();
+    private BelongingPeriodoPK id = new BelongingPeriodoPK();
     private Integer position;
 
     public BelongingPeriodo(){}
 
-    public BelongingPeriodo(Disciplina dsiciplina, PeriodoList periodo, Integer position){
+    public BelongingPeriodo(Disciplina disciplina, PeriodoList periodo, Integer position){
         this.id.setDisciplina(disciplina);
         this.id.setPeriodoList(periodo);
         this.position = position;
