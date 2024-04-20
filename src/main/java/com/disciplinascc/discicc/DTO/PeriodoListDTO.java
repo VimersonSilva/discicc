@@ -11,4 +11,12 @@ public class PeriodoListDTO {
         this.id = periodoList.getId();
         this.nomePeriodo = periodoList.getNomePeriodo();
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNomePeriodo() {
+        return nomePeriodo;
+    }
 }

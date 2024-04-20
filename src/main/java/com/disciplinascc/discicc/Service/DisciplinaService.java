@@ -11,8 +11,8 @@ public class DisciplinaService implements DisciplinaServiceInterface{
     DisciplinaRepository disciplinaRepository;
     @Override
     @Transactional(readOnly = true)
-    public DisciplinaDTO findById(Long idCodigoDisciplina){
-        Disciplina result = disciplinaRepository.findById(idCodigoDisciplina).get();
+    public DisciplinaDTO findById(Long id){
+        Disciplina result = disciplinaRepository.findById(id).get();
         DisciplinaDTO disciplinaDTO = new DisciplinaDTO(result);
         return disciplinaDTO;
     }

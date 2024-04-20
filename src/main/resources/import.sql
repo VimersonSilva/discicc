@@ -1,3 +1,16 @@
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Primeiro período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Segundo período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Terceiro período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Quarto período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Quinto período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Sexto período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Sétimo período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Oitavo período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Nono período')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Optativas Gerais')
+INSERT INTO tb_periodo_list(nome_periodo) VALUES('Optativas Específica')
+
+
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411167,'Programação I', 1, 4, 'P I')
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411180,'Laboratório de Programação I', 1, 4, 'LP I')
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411311,'Fundamentos de Matemática para Ciência da Computação I', 1, 4, 'FMCC I')
@@ -98,6 +111,117 @@ INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quan
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411356,'TECC I (CIÊNCIA DE DADOS PREDITIVA)', 6, 4, 'CDP')
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411357,'TECC I (GOVERNANÇA DA INTERNET)', 6, 4, 'GI')
 
+--1
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (1, 1, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (1, 2, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (1, 3, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (1, 4, 3);
 
+--2
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (2, 5, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (2, 6, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (2, 7, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (2, 8, 3);
+--3
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (3, 9, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (3, 10, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (3, 11, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (3, 12, 3);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (3, 13, 4);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (3, 14, 5);
+--4
 
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (4, 15, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (4, 16, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (4, 17, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (4, 18, 3);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (5, 19, 4);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (5, 20, 5);
 
+--5
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (5, 21, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (5, 22, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (5, 23, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (6, 24, 3);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (6, 25, 4);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (6, 26, 5);
+
+--6
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (6, 27, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (6, 28, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (7, 29, 2);
+
+--7
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (7, 30, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (7, 31, 1);
+
+--8
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (8, 32, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (8, 33, 1);
+
+--9
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (9, 34, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (9, 35, 1);
+
+--op.geral
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 36, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 37, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 38, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 39, 3);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 40, 4);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 41, 5);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 42, 6);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 43, 7);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 44, 8);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 45, 9);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 46, 10);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (10, 47, 11);
+
+--op. especifica
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 48, 0);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 49, 1);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 50, 2);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 51, 3);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 52, 4);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 53, 5);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 54, 6);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 55, 7);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 56, 8);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 57, 9);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 58, 10);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 59, 11);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 60, 12);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 61, 13);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 62, 14);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 63, 15);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 64, 16);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 65, 17);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 66, 18);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 67, 19);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 68, 20);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 69, 21);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 70, 22);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 71, 23);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 72, 24);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 73, 25);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 74, 26);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 75, 27);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 76, 28);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 77, 29);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 78, 30);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 79, 31);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 80, 32);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 81, 33);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 82, 34);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 83, 35);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 84, 36);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 85, 37);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 86, 38);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 87, 39);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 88, 40);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 89, 41);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 90, 42);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 91, 43);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 92, 44);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 93, 45);
+INSERT INTO tb_belonging_periodo (list_id, disciplina_id, position) VALUES (11, 94, 46);

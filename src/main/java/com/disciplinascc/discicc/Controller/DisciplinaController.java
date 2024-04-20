@@ -1,8 +1,10 @@
 package com.disciplinascc.discicc.Controller;
 
 import com.disciplinascc.discicc.DTO.DisciplinaDTO;
+import com.disciplinascc.discicc.Repository.DisciplinaRepository;
 import com.disciplinascc.discicc.Service.DisciplinaBuscaTodosServiceInterface;
 import com.disciplinascc.discicc.Service.DisciplinaServiceInterface;
+import com.disciplinascc.discicc.entities.Disciplina;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +24,9 @@ public class DisciplinaController {
     @Autowired
     private DisciplinaServiceInterface disciplinaService;
 
+    @Autowired
+    private DisciplinaRepository disciplinaRepository;
+
     @GetMapping
     public List<DisciplinaDTO> findAll() {
         List<DisciplinaDTO> result = disciplinaBuscaTodosService.findAll();
@@ -30,7 +35,9 @@ public class DisciplinaController {
 
     @GetMapping(value = "/{idDisciplina}")
     public DisciplinaDTO findById(@PathVariable Long idDisciplina) {
-        DisciplinaDTO result = disciplinaService.findById(idDisciplina);
-        return result;
+        //DisciplinaDTO result = disciplinaService.findById(idDisciplina);
+        Disciplina result = disciplinaRepository.findById(idDisciplina).get();
+        DisciplinaDTO disciplinaDTO = new DisciplinaDTO(result);
+        return disciplinaDTO;
     }
 }

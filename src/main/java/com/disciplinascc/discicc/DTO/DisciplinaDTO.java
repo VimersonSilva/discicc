@@ -1,30 +1,41 @@
 package com.disciplinascc.discicc.DTO;
 
 import com.disciplinascc.discicc.entities.Disciplina;
+import com.disciplinascc.discicc.projections.DisciplinaProjection;
 import org.springframework.beans.BeanUtils;
 
 public class DisciplinaDTO {
 
-    private Long idCodigoDisciplina;
+    private Long id;
+    private Integer codigoDisciplina;
     private String nomeDisciplina;
     private Integer numPeriodo;
     private Integer quantCreditos;
+    private String sigla;
 
     //private String tipoDisciplina;
 
-    private String[] preRequisitos;
-    private String sigla;
+    //private String[] preRequisitos;
 
+
+    public DisciplinaDTO(DisciplinaProjection disciplinaProjection){
+        this.id = disciplinaProjection.getId();
+        this.codigoDisciplina = disciplinaProjection.getCodigoDisciplina();
+        this.nomeDisciplina = disciplinaProjection.getNomeDisciplina();
+        this.numPeriodo = disciplinaProjection.getNumPeriodo();
+        this.quantCreditos = disciplinaProjection.getQuantCreditos();
+        this.sigla = disciplinaProjection.getSigla();
+    }
     public DisciplinaDTO(Disciplina disciplina){
         BeanUtils.copyProperties(disciplina, this);
     }
 
-    public Long getIdCodigoDisciplina() {
-        return idCodigoDisciplina;
+    public Integer getCodigoDisciplina() {
+        return codigoDisciplina;
     }
 
-    public void setIdCodigoDisciplina(Long idCodigoDisciplina) {
-        this.idCodigoDisciplina = idCodigoDisciplina;
+    public void setCodigoDisciplina(Integer codigoDisciplina) {
+        this.codigoDisciplina = codigoDisciplina;
     }
 
     public String getNomeDisciplina() {
@@ -51,13 +62,13 @@ public class DisciplinaDTO {
         this.quantCreditos = quantCreditos;
     }
 
-    public String[] getPreRequisitos() {
+    /*public String[] getPreRequisitos() {
         return preRequisitos;
     }
 
     public void setPreRequisitos(String[] preRequisitos) {
         this.preRequisitos = preRequisitos;
-    }
+    }*/
 
     public String getSigla() {
         return sigla;
