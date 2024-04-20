@@ -3,11 +3,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tb_disciplina")
@@ -22,16 +18,22 @@ public class Disciplina implements Serializable {
     private Integer quantCreditos;
 
     //private String tipoDisciplina;
-
-    //private List<Disciplina> preRequisitos;
+    @ManyToMany
+    @JoinTable(
+            name = "disciplina_prerequisito",
+            joinColumns = @JoinColumn(name = "disciplina_id"),
+            inverseJoinColumns = @JoinColumn(name="prerequisito_id")
+    )
+    private List<Disciplina> preRequisitos;
     private String sigla;
 
     public Disciplina(){}
 
     public Disciplina(Integer codigoDisciplina, String nomeDisciplina,
-                      Integer numPeriodo, Integer quantCreditos, String sigla){
+                      Integer numPeriodo, Integer quantCreditos,List<Disciplina> preRequisitos, String sigla){
         this.codigoDisciplina = codigoDisciplina;
         this.nomeDisciplina = nomeDisciplina;
+        this.preRequisitos = preRequisitos;
         this.numPeriodo = numPeriodo;
         this.sigla = sigla;
         this.quantCreditos = quantCreditos;

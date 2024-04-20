@@ -40,11 +40,11 @@ public class DisciplinaControllerTests {
     @BeforeEach
     void setup(){
         object.registerModule(new JavaTimeModule());
-        disciplina = disciplinaRepository.save(
-                new Disciplina(1411311,
-                        "FUND DE MATEMÁTICA P/ C.DA COMPUTAÇÃO I",
-                        1, 4, "FMCC I")
-        );
+ //       disciplina = disciplinaRepository.save(
+ //               new Disciplina(1411311,
+ //                       "FUND DE MATEMÁTICA P/ C.DA COMPUTAÇÃO I",
+ //                       1, 4, "FMCC I")
+ //       );
     }
 
     @AfterEach
