@@ -2,6 +2,7 @@ package com.disciplinascc.discicc.Controller;
 
 import com.disciplinascc.discicc.DTO.DisciplinaDTO;
 import com.disciplinascc.discicc.Repository.DisciplinaRepository;
+import com.disciplinascc.discicc.Service.DisciplinaBuscaPreRequisitosServiceInterface;
 import com.disciplinascc.discicc.Service.DisciplinaBuscaTodosServiceInterface;
 import com.disciplinascc.discicc.Service.DisciplinaServiceInterface;
 import com.disciplinascc.discicc.entities.Disciplina;
@@ -23,7 +24,8 @@ public class DisciplinaController {
 
     @Autowired
     private DisciplinaServiceInterface disciplinaService;
-
+    @Autowired
+    private DisciplinaBuscaPreRequisitosServiceInterface disciplinaBuscaPreRequisitos;
     @Autowired
     private DisciplinaRepository disciplinaRepository;
 
@@ -39,5 +41,13 @@ public class DisciplinaController {
         Disciplina result = disciplinaRepository.findById(idDisciplina).get();
         DisciplinaDTO disciplinaDTO = new DisciplinaDTO(result);
         return disciplinaDTO;
+    }
+
+    @GetMapping(value = "/{idDisciplina}/pre-requisitos")
+    public List<DisciplinaDTO> findRequirements(@PathVariable Long idDisciplina){
+        //return disciplinaBuscaPreRequisitos.buscaPreRequisitos(idDisciplina);
+        Disciplina result = disciplinaRepository.findById(idDisciplina).get();
+        List<DisciplinaDTO> requisitos = result.getPreRequisitos().stream().map(x -> new DisciplinaDTO(x)).toList();
+        return requisitos;
     }
 }

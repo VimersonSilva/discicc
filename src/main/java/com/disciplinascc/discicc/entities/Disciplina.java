@@ -18,7 +18,7 @@ public class Disciplina implements Serializable {
     private Integer quantCreditos;
 
     //private String tipoDisciplina;
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "disciplina_prerequisito",
             joinColumns = @JoinColumn(name = "disciplina_id"),
@@ -59,7 +59,13 @@ public class Disciplina implements Serializable {
         return quantCreditos;
     }
 
+    public List<Disciplina> getPreRequisitos() {
+        return preRequisitos;
+    }
 
+    public void setPreRequisitos(List<Disciplina> preRequisitos) {
+        this.preRequisitos = preRequisitos;
+    }
     public String getSigla() {
         return sigla;
     }

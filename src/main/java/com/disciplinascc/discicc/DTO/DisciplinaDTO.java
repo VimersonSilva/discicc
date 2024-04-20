@@ -4,6 +4,8 @@ import com.disciplinascc.discicc.entities.Disciplina;
 import com.disciplinascc.discicc.projections.DisciplinaProjection;
 import org.springframework.beans.BeanUtils;
 
+import java.util.List;
+
 public class DisciplinaDTO {
 
     private Long id;
@@ -15,7 +17,7 @@ public class DisciplinaDTO {
 
     //private String tipoDisciplina;
 
-    //private String[] preRequisitos;
+    private List<DisciplinaDTO> preRequisitos;
 
 
     public DisciplinaDTO(DisciplinaProjection disciplinaProjection){
@@ -62,13 +64,13 @@ public class DisciplinaDTO {
         this.quantCreditos = quantCreditos;
     }
 
-    /*public String[] getPreRequisitos() {
+    public List<DisciplinaDTO> getPreRequisitos() {
         return preRequisitos;
     }
 
-    public void setPreRequisitos(String[] preRequisitos) {
+    public void setPreRequisitos(List<DisciplinaDTO> preRequisitos) {
         this.preRequisitos = preRequisitos;
-    }*/
+    }
 
     public String getSigla() {
         return sigla;
