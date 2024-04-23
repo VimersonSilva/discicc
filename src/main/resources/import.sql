@@ -43,7 +43,7 @@ INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quan
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411187,'Análise e Técnicas de Algoritmos', 7, 4, 'ATAL')
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411189,'Compiladores', 7, 4, NULL)
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411185,'Projeto em Computação I', 8, 4, 'PCI')
-INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1111111,'Projeto de Trabalho de Conclusão de Curso', 8, 4, 'PTCC')
+INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411317,'Projeto de Trabalho de Conclusão de Curso', 8, 4, 'PTCC')
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411348,'Projeto em Computação II', 9, 4, 'PCII')
 INSERT INTO tb_disciplina (codigo_disciplina, nome_disciplina, num_periodo, quant_creditos, sigla) VALUES (1411318,'Trabalho de Conclusão de Curso', 9, 4, 'TCC')
 
